@@ -1,0 +1,40 @@
+<mat-drawer-container
+  [ngClass]="{
+    'drawer-close': isOpen === false,
+    'drawer-open': isOpen === true
+  }"
+>
+  <mat-drawer #drawer mode="side" opened class="example-sidenav">
+    <h2 class="drawer__title">Vitarico</h2>
+
+    <hr />
+    <div class="boxes-container">
+      <div class="boxes" routerLink="/home">
+        <a class="parr">Inicio</a>
+      </div>
+
+      <div class="boxes" routerLink="/list">
+        <a class="parr">Clientes</a>
+      </div>
+      <div class="boxes">
+        <a class="parr">Ventas</a>
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-icon
+    *ngIf="isOpen === false"
+    aria-hidden="false"
+    aria-label="Example home icon"
+    (click)="drawer.toggle(); isOpen = !isOpen"
+    class="arrow"
+    >arrow_forward_ios</mat-icon
+  >
+  <mat-icon
+    *ngIf="isOpen === true"
+    aria-hidden="false"
+    aria-label="Example home icon"
+    (click)="drawer.toggle(); isOpen = !isOpen"
+    class="arrow"
+    >arrow_back_ios</mat-icon
+  >
+</mat-drawer-container>

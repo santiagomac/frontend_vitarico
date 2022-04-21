@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="main-title">
+    <h1>Inicio</h1>
+  </div>
+  <div class="container-cards">
+    <div *ngFor="let category of categories" class="box-card">
+      <mat-card class="card-box" [routerLink]="['/', category.router]">
+        <mat-card-title class="title">{{ category.name }}</mat-card-title>
+        <mat-icon
+          class="icon"
+          aria-hidden="false"
+          aria-label="`${category.name}`"
+          >{{ category.icon }}</mat-icon
+        >
+      </mat-card>
+    </div>
+  </div>
+</div>
