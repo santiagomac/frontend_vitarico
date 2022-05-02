@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.card{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.col{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.email{
+    width: 100%;
+
+    .input {
+        width: 100%;
+    }
+}
+
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button{
+        height: 50px;
+        width: 150px;
+    }
+}

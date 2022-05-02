@@ -5,3 +5,10 @@ export interface Customer {
   email: string;
   document: string;
 }
+
+export interface CustomerToSave{
+  name: string;
+  lastname: string;
+  email: string;
+  document: string;
+}

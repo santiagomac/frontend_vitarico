@@ -8,7 +8,7 @@ import { CustomerService } from '../../services/customer.service';
   styleUrls: ['./list-client.component.scss'],
 })
 export class ListClientComponent implements OnInit {
-  displayedColumns = ['name', 'lastname', 'email', 'document'];
+  displayedColumns = ['name', 'lastname', 'email', 'document', 'actions'];
   customers: Customer[] = [];
 
   constructor(private customerService: CustomerService) {}
@@ -23,5 +23,11 @@ export class ListClientComponent implements OnInit {
     });
 
     console.log(this.customers);
+  }
+
+  deleteCustomer(id: number){
+    this.customerService.deleteCustomer(id).subscribe(data => {
+      this.getCustomers()
+    })
   }
 }

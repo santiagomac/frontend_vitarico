@@ -1,1 +1,43 @@
-<p>create-client works!</p>
+<div class="container">
+  <mat-card class="card">
+    <form [formGroup]="customerForm">
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="lastname" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col email">
+          <mat-form-field appearance="fill" class="input">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label>Documento</mat-label>
+            <input matInput formControlName="document" />
+          </mat-form-field>
+        </div>
+
+        <div class="col button">
+          <button mat-raised-button color="primary" (click)="saveCustomer()">
+            Guardar
+          </button>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+</div>
