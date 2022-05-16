@@ -7,7 +7,7 @@
       class="back__arrow"
       >arrow_back_ios</mat-icon
     >
-    <form [formGroup]="customerForm">
+    <form [formGroup]="productForm">
       <div class="row">
         <div class="col">
           <mat-form-field appearance="fill">
@@ -17,16 +17,16 @@
         </div>
         <div class="col">
           <mat-form-field appearance="fill">
-            <mat-label>Apellido</mat-label>
-            <input matInput formControlName="lastname" />
+            <mat-label>Precio</mat-label>
+            <input matInput formControlName="price" />
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col email">
           <mat-form-field appearance="fill" class="input">
-            <mat-label>Email</mat-label>
-            <input matInput formControlName="email" />
+            <mat-label>Código</mat-label>
+            <input matInput formControlName="code" />
           </mat-form-field>
         </div>
       </div>
@@ -34,13 +34,13 @@
       <div class="row">
         <div class="col">
           <mat-form-field appearance="fill">
-            <mat-label>Documento</mat-label>
-            <input matInput formControlName="document" />
+            <mat-label>Stock</mat-label>
+            <input matInput formControlName="stock" />
           </mat-form-field>
         </div>
 
         <div class="col button">
-          <button mat-raised-button color="primary" (click)="saveCustomer()">
+          <button mat-raised-button color="primary" (click)="saveProduct()">
             Guardar
           </button>
         </div>

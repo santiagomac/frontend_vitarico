@@ -7,9 +7,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListSalesComponent } from './components/list-sales/list-sales.component';
+import { ListProductsComponent } from './components/list-products/list-products.component';
+import { CreateProductComponent } from './components/create-product/create-product.component';
 
 @NgModule({
-  declarations: [CreateClientComponent, ListClientComponent, ListSalesComponent],
+  declarations: [CreateClientComponent, ListClientComponent, ListSalesComponent, ListProductsComponent, CreateProductComponent],
   imports: [CommonModule, AngularMaterialModule, HttpClientModule, RouterModule, ReactiveFormsModule],
   exports: [CreateClientComponent, ListClientComponent],
 })
